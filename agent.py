@@ -24,6 +24,10 @@ import sys, os
 import yaml
 import wishful_agent
 
+__author__ = "Peter Ruckebusch"
+__copyright__ = "Copyright (c) 2016, Ghent University, iMinds"
+__version__ = "0.1.0"
+
 log = logging.getLogger('agent')
 control_agent = wishful_agent.Agent()
 
