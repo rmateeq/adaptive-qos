@@ -71,5 +71,5 @@
     - name: Install module_contiki
       become: true
       pip:
-        name: git+https://github.com/https://github.com/rmateeq/module_contiki#egg=module_contiki
+        name: git+https://github.com/rmateeq/module_contiki#egg=module_contiki
         executable: pip3
