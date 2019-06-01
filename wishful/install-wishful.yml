@@ -68,8 +68,8 @@
         requirements: /root/wishful/.repo/manifests/requirements.txt
         executable: pip3
 
-    - name: Clone module_contiki
+    - name: Install module_contiki
       become: true
       pip:
-        name: git+https://github.com/wishful-project/manifests.git
+        name: git+https://github.com/https://github.com/rmateeq/module_contiki#egg=module_contiki
         executable: pip3
