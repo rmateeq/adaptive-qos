@@ -11,4 +11,4 @@ apt-get install python-dev libffi-dev python-pip -y
 pip install --upgrade markupsafe setuptools ansible==2.0.2.0
 
 echo Installing Wishful
-ansible -i wishful/inventory wishful/install-wishful.yml
+ansible-playbook -i wishful/inventory wishful/install-wishful.yml
