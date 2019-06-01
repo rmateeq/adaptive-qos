@@ -1,6 +1,6 @@
 [ap]
-nuc0-4  ansible_host=nuc0-4.wilab1.ilabt.iminds.be
+ap  ansible_host=nuc0-4.wilab1.ilabt.iminds.be
 
 [client]
-nuc0-5  ansible_host=nuc0-5.wilab1.ilabt.iminds.be
-nuc0-6  ansible_host=nuc0-6.wilab1.ilabt.iminds.be
+client1  ansible_host=nuc0-5.wilab1.ilabt.iminds.be
+client2  ansible_host=nuc0-6.wilab1.ilabt.iminds.be
