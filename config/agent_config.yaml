@@ -23,7 +23,7 @@ modules:
         module : wishful_module_gitar
         class_name : GitarEngine
         interfaces : ['lowpan0']
-        kwargs : kwargs : {'GitarConfig' : './config/gitar.ini','SupportedInterfaces' : ['lowpan0'],'ControlExtensions' : {'taisc' : './protocol_connectors/taisc_control_extensions.csv', 'rime' : './protocol_connectors/rime_control_extensions.csv'}}
+        kwargs : {'GitarConfig' : './config/gitar.ini','SupportedInterfaces' : ['lowpan0'],'ControlExtensions' : {'taisc' : './protocol_connectors/taisc_control_extensions.csv', 'rime' : './protocol_connectors/rime_control_extensions.csv'}}
     taisc_connector:
         module : wishful_module_taisc
         class_name : TAISCConnector
