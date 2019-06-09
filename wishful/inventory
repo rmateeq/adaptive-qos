@@ -1,2 +1,2 @@
 [sensor]
-sensor  ansible_host=nuc0-12.wilab1.ilabt.iminds.be
+nuc0-1  ansible_host=nuc0-1.wilab1.ilabt.iminds.be
