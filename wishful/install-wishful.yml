@@ -1,10 +1,10 @@
 ---
 - hosts: all
-    tasks:
-      - name: Install requirements for WiSHFUL
-        become: true
-        apt: pkg={{ item }} state=installed update_cache=true
-        with_items:
+  tasks:
+    - name: Install requirements for WiSHFUL
+      become: true
+      apt: pkg={{ item }} state=installed update_cache=true
+      with_items:
         - wget
         - git
         - python3-pip
