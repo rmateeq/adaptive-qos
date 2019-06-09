@@ -160,6 +160,7 @@ if __name__ == "__main__":
     nodes_file_path = args['--nodes']
     with open(nodes_file_path, 'r') as f:
         node_config = yaml.load(f)
+    print(str(node_config['ip_address_list']),str(nodes_file_path))
     global_node_manager.wait_for_agents(node_config['ip_address_list'])
 
     measurements_file_path = args['--measurements']
