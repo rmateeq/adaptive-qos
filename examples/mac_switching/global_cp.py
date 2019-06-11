@@ -23,6 +23,7 @@ Other options:
    --version           show version and exit
 """
 
+import os
 import datetime
 import logging
 from contiki.contiki_helpers.global_node_manager import *
@@ -38,6 +39,8 @@ __version__ = "0.1.0"
 __email__ = "peter.ruckebusch@intec.ugent.be"
 
 log = logging.getLogger('contiki_global_control_program')
+
+BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 
 def default_callback(group, node, cmd, data):
@@ -78,11 +81,11 @@ def main(args):
     log.info("Configuring TDMA")
     taisc_manager.activate_radio_program("TDMA")
     gevent.sleep(5)
-    ret = taisc_manager.update_slotframe('./mac_switching/taisc_slotframe.csv', 'TDMA')
+    ret = taisc_manager.update_slotframe(os.path.join(BASE_DIR, 'taisc_slotframe.csv'), 'TDMA')
     log.info(ret)
     gevent.sleep(5)
     log.info("Configuring TSCH")
-    ret = taisc_manager.update_slotframe('./mac_switching/taisc_slotframe.csv', 'TSCH')
+    ret = taisc_manager.update_slotframe(os.path.join(BASE_DIR, 'taisc_slotframe.csv'), 'TSCH')
     log.info(ret)
     gevent.sleep(5)
     ret = taisc_manager.update_macconfiguration({'IEEE802154_macSlotframeSize': len(contiki_nodes) + 1})
