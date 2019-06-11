@@ -31,8 +31,8 @@ modules:
         kwargs :
             RadioPrograms : {"CSMA":0,"TDMA":2,"TSCH":1}
             SupportedInterfaces : ['lowpan0']
-            ControlAttributes : './protocol_connectors/taisc_ctrl_attributes.csv'
-            ControlFunctions : './protocol_connectors/taisc_ctrl_functions.csv'
+            ControlAttributes : {'taisc_connector': './protocol_connectors/taisc_ctrl_attributes.csv'}
+            ControlFunctions : {'taisc_connector': './protocol_connectors/taisc_ctrl_functions.csv'}
             ProtocolConnectors: {'taisc_connector': 3}
     rime_connector:
         module : wishful_module_rime
@@ -40,6 +40,6 @@ modules:
         interfaces : ['lowpan0']
         kwargs :
             SupportedInterfaces : ['lowpan0']
-            ControlAttributes : './protocol_connectors/rime_ctrl_attributes.csv'
-            ControlFunctions : './protocol_connectors/rime_ctrl_functions.csv'
+            ControlAttributes : {'rime_connector': './protocol_connectors/rime_ctrl_attributes.csv'}
+            ControlFunctions : {'rime_connector': './protocol_connectors/rime_ctrl_functions.csv'}
             ProtocolConnectors: {'rime_connector': 3}
