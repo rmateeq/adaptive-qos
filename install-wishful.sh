@@ -1,6 +1,6 @@
 set -e
 
-sudo apt-get install python3-pip -y
+sudo apt-get install python-pip -y
 
 sudo pip install ansible==2.0.2.0
 
