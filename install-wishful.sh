@@ -1,8 +1,11 @@
 set -e
 
-sudo apt-get install python-pip -y
+#install dependencies
+apt-get update
+apt-get install python-dev libffi-dev python-pip -y
 
-sudo pip install ansible==2.0.2.0
+#install ansible
+pip install --upgrade markupsafe setuptools ansible==2.0.2.0
 
 echo Installing Wishful
 DIRECTORY=$(cd `dirname $0` && pwd)
