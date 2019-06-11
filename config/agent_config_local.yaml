@@ -23,11 +23,7 @@ modules:
         module : wishful_module_gitar
         class_name : GitarEngine
         interfaces : ['lowpan0']
-        kwargs :
-            GitarConfig : './config/gitar_local.ini'
-            SupportedInterfaces : ['lowpan0']
-            ControlAttributes : './protocol_connectors/gitar_ctrl_attributes.csv'
-            ControlFunctions : './protocol_connectors/gitar_ctrl_functions.csv'
+        kwargs : {'GitarConfig' : './config/gitar_local.ini','SupportedInterfaces' : ['lowpan0'],'ControlExtensions' : {'taisc' : './protocol_connectors/taisc_control_extensions.csv', 'rime' : './protocol_connectors/rime_control_extensions.csv'}}
     taisc_connector:
         module : wishful_module_taisc
         class_name : TAISCConnector
@@ -37,6 +33,7 @@ modules:
             SupportedInterfaces : ['lowpan0']
             ControlAttributes : './protocol_connectors/taisc_ctrl_attributes.csv'
             ControlFunctions : './protocol_connectors/taisc_ctrl_functions.csv'
+            ProtocolConnectors: {'taisc_connector': 3}
     rime_connector:
         module : wishful_module_rime
         class_name : RIMEConnector
@@ -45,3 +42,4 @@ modules:
             SupportedInterfaces : ['lowpan0']
             ControlAttributes : './protocol_connectors/rime_ctrl_attributes.csv'
             ControlFunctions : './protocol_connectors/rime_ctrl_functions.csv'
+            ProtocolConnectors: {'rime_connector': 3}
