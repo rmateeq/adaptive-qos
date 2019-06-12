@@ -22,24 +22,24 @@ modules:
     gitar_engine:
         module : wishful_module_gitar
         class_name : GitarEngine
-        interfaces : ['lowpan0']
-        kwargs : {'GitarConfig' : './config/gitar.ini','SupportedInterfaces' : ['lowpan0'],'ControlExtensions' : {'taisc' : './protocol_connectors/taisc_control_extensions.csv', 'rime' : './protocol_connectors/rime_control_extensions.csv'}}
+        interfaces : ['lowpan0','lowpan1']
+        kwargs : {'GitarConfig' : './config/gitar.ini','SupportedInterfaces' : ['lowpan0','lowpan1'],'ControlExtensions' : {'taisc' : './protocol_connectors/taisc_control_extensions.csv', 'rime' : './protocol_connectors/rime_control_extensions.csv'}}
     taisc_connector:
         module : wishful_module_taisc
         class_name : TAISCConnector
         interfaces : ['lowpan0']
         kwargs :
             RadioPrograms : {"CSMA":0,"TDMA":2,"TSCH":1}
-            SupportedInterfaces : ['lowpan0']
+            SupportedInterfaces : ['lowpan0','lowpan1']
             ControlAttributes : {'taisc_connector': './protocol_connectors/taisc_ctrl_attributes.csv'}
             ControlFunctions : {'taisc_connector': './protocol_connectors/taisc_ctrl_functions.csv'}
             ProtocolConnectors: {'taisc_connector': 3}
     rime_connector:
         module : wishful_module_rime
         class_name : RIMEConnector
-        interfaces : ['lowpan0']
+        interfaces : ['lowpan0','lowpan1']
         kwargs :
-            SupportedInterfaces : ['lowpan0']
+            SupportedInterfaces : ['lowpan0','lowpan1']
             ControlAttributes : {'rime_connector': './protocol_connectors/rime_ctrl_attributes.csv'}
             ControlFunctions : {'rime_connector': './protocol_connectors/rime_ctrl_functions.csv'}
             ProtocolConnectors: {'rime_connector': 3}
